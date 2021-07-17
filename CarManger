@@ -1,0 +1,45 @@
+package practice;
+
+class Car1 {
+	//Car 클래스의 생성자
+	Car1() {
+		
+	} // 생성자 안에 아무 내용도 없다. 일단 생성자가 없어도 정상적인 실행결과가 출력된다. 
+  
+	int speed;
+	int distance;
+	String color;
+	
+	public void speedUp() {
+		
+		speed+=5; // speed=speed+5; 로 해도 무방하다. 
+	}
+	
+	public void breakDown() {
+		
+		speed-=10; // speed=speed-10; 으로 해도 무방하다. 
+	}
+	
+	//현재 속도 출력하는 메소드, 위의 두 메소드(반환값X)와는 달리 반환 type이 int형이다.
+	public int getCurrentSpeed() { 
+		return speed; // 현재의 speed값을 출력해야 하므로 speed값을 리턴한다. 
+	}
+}
+
+
+public class CarManager {
+	public static void main(String[] args) {
+		
+		Car1 dogCar = new Car1();
+		dogCar.speedUp(); //dogCar의 속력을 올리고 싶다면 
+		dogCar.speedUp();
+		System.out.println(dogCar.getCurrentSpeed());
+		
+		Car1 cowCar = new Car1(); 
+		cowCar.speedUp();
+		cowCar.speedUp();
+		cowCar.breakDown();
+		System.out.println(cowCar.getCurrentSpeed());
+	}
+ }
+
