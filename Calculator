@@ -1,0 +1,42 @@
+package practice;
+
+class Calculator1 {
+	int num1,num2; // 계산을 하기 위한 2개의 피연산자(연산의 대상이 되는) int형 변수 설정
+	
+  // 더하기 add 메서드 
+	void add(int num1,int num2) {
+		int sum=num1+num2;
+		System.out.println(sum); // 더한 값의 결과인 sum을 출력 
+	}
+	
+  // 빼기 substract 메서드 
+	void substract(int num1,int num2) {
+		int sum=num1-num2; 
+		System.out.println(sum); // 뺀 값의 결과인 sum을 출력 
+	} 
+	
+  
+ // 나누기 divide 메서드 
+	void divide(int num1,int num2) {
+		int sum=(num1)/(num2); // num1/num2 해도 무방 
+		System.out.println(sum); // 나눈 값의 결과인 sum 출력 
+		}
+	
+  // 곱하기 multiply 메서드 
+	void multiply(int num1,int num2) {
+		int sum=num1*num2;
+		System.out.println(sum); // 곱한 값의 결과인 sum 출력 
+	}
+}
+
+public class Calculator { 
+	public static void main(String[] args) {
+		
+
+		Calculator1 cal1=new Calculator1(); // Calculator1 클래스로부터 객체를 생성하고 선언한다. 
+		cal1.add(2,3); // cal1 객체를 사용한다. 
+		cal1.substract(5,2);
+		cal1.divide(10,2);
+		cal1.multiply(2,3);
+}
+}
