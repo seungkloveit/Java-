@@ -1,0 +1,66 @@
+package practice;
+
+public class Operator {
+	public static void main(String[] args) {
+		Operator sample=new Operator();
+		sample.additive(); // 더하기,빼기  메소드 
+		sample.multiplicative(); // 곱하기 메소드 
+		sample.remainder(); // 나머지 메소드 
+		sample.increDecre(); // 전위,후위연산자 메소드 
+		sample.complement(); // booelan(참,거짓) 메소드 
+		
+	}
+
+// 더하기,빼기 메소드 
+	private void additive() {
+		int intValue1=5;
+		int intValue2=10;
+		
+		int result=intValue1+intValue2; //Value1과 Value2의 값을 더해 result 변수에 저장 
+		System.out.println(result); // result 출력 
+		result=intValue2-intValue1; // 이번에는 intValue2에서 intValue1의 값을 뺀 후에 result 변수에 저장해보자. 그럼 위의 result변수에 저장되어 있는 값이 바뀐다. 
+		
+		System.out.println(result); // result 출력 
+		
+	}
+	
+  // 곱하기 메소드 
+	private void multiplicative() {
+		int intValue3=2;
+		int intValue4=8;
+		
+		int result2=intValue3 * intValue4; //intValue3과 intValue4의 값을 곱한 후에 result2 변수에 값을 저장한다. 
+		System.out.println(result2);
+		
+		float result3=(float)intValue3/intValue4; // result3은 result4보다 값이 적으니 int형으로 나누게 되면 0으로 나온다. 그래서 0으로 값이 나오는걸 방지하기 위해서 float형변환 필요. 
+		System.out.println(result3);
+	}
+	
+  // 나머지 구하는 remainder 메소드 
+	private void remainder() {
+		int intValue1=53;
+		int intValue2=10;
+		int result=intValue1 % intValue2; // 나머지를 구할 떄는 % 기호를 사용한다. 
+		System.out.println(result);
+		
+	}
+	
+  //전위,후위 연산하는 메소드 
+	private void increDecre() {
+		int intValue=1;
+		System.out.println(intValue++); // System.out.println(intValue); 1
+		System.out.println(intValue); // 2
+		System.out.println(++intValue); // 3
+	}
+	
+  // boolean(참,거짓) 구하는 메소드 
+	private void complement() {
+		boolean flag=true;
+		System.out.println(flag);
+		System.out.println(!flag);
+	}
+	
+	
+	
+
+}
