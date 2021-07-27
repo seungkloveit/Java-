@@ -1,0 +1,88 @@
+package practice;
+
+/* public class ReferenceTypes {
+	// ReferenceTypes 클래스의 생성자 
+	public ReferenceTypes(String data) { 
+		
+		
+	}
+	public static void main(String[] args) {
+		
+		ReferenceTypes reference = new ReferenceTypes(); //참조자료형 reference를 생성하기 위해 new 키워드를 통해 생성. 여기서 ReferenceTypes()는 생성자
+	}
+
+} 
+위와 같은 코드에서 The constructor ReferenceTypes() is undefined 라는 오류가 발생하였다.(new ReferenceTypes()) 부분에서 
+이러한 오류가 발생하는 이유는 아무런 매개 변수가 없는 ReferenceTypes()라는 생성자는 다른 생성자가 없을 경우 기본으로 컴파일할 때 만들어진다. 
+그런데 기본 생성자는 다른 생성자가 있으면 자동으로 만들어지지 않는다. 
+
+>> 근데 나는 윗줄에서 String data라고 하는 매개변수가 있는 것 같은데 왜 매개변수가 없는 생성자라고 책에서 표기되는지 이해가 되지 않는다. 
+
+*
+*
+*/ 
+
+// 매개변수가 없는 생성자를 사용하고 싶다면 아래와 같이 컴파일하여야 한다. 아래와 같은 코드로 작성하니 위와 같은 The constructor~ 오류가 발생하지 않았다. 
+// 생성자는 자바 클래스의 객체 또는 인스턴스를 생성하기 위해서 존재한다. 
+
+public class MemberDTO { 
+	public String name;
+	public String phone;
+	public String email;
+}
+
+public MeberDTO getMemberDTO() {
+	public String name;
+	public String phone;
+	public String email;
+	
+	// 아래에서 상황에 맞는 생성자를 쓰자 
+	// 아무 정보도 모를 때 
+	public MemberDTO() {
+		
+	}
+	
+	// 이름만 알 때
+	public MemberDTO(String name) {
+		this.name=name;
+	}
+	
+	// 이름과 전화번호만 알 떄 
+	
+	public MemberDTO(String name,String phone) {
+		this.name=name;
+		this.phone=phone;
+	}
+	
+	// 모든 정보를 알고 있을 때 
+	public MemberDTO(String name,String phone,String email) {
+		this.name=name;
+		this.phone=phone;
+		this.email=email;
+	}
+}
+
+public class ReferenceTypes {
+	// ReferenceTypes 클래스의 생성자 
+	
+	public ReferenceTypes() {
+		
+	}
+	public ReferenceTypes(String data) { 
+		
+		
+	}
+	public static void main(String[] args) {
+		
+		ReferenceTypes reference = new ReferenceTypes();
+	}//참조자료형 reference를 생성하기 위해 new 키워드를 통해 생성. 여기서 ReferenceTypes()는 생성자
+	
+	
+	public void makeMemberObject() {
+		MemberDTO dto1=new MemberDTO(); // 위의 생성자에서 '아무 정보도 모를 때' 
+		MemberDTO dto2=new MemberDTO("Jungkuk"); // 위의 생성자에서 '이름만 알 때' 
+		MemberDTO dto3=new MemberDTO("Jungkuk","01011111111"); // 위의 생성자에서 '이름하고 전화번호만 알 때' 
+		MemberDTO dto4=new MemberDTO("Jungkuk","01011111111","BTS@bts.com"); // 위의 생성자에서 '모든 정보를 알 때'
+	}
+
+} 
